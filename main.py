@@ -55,7 +55,7 @@ model = load_model('model.h5')
 tokenizer = load(open('tokenizer.pkl', 'rb'))
 
 # generate new text
-generated = generate_seq(model, tokenizer, seq_length, seed_text, 10)
+generated = generate_seq(model, tokenizer, 50, seed_text, 10)
 
 
 st.title("Language Modelling API")
