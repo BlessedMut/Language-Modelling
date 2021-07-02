@@ -59,7 +59,7 @@ tokenizer = load(open('./tokenizer.pkl', 'rb'))
 
 seed_text = generate_sequ()
 
-col1. col2 = st.beta_columns([2,8])
+col1, col2 = st.beta_columns([2,8])
 with col1:
     btn_text = st.button("Generate Seq")
 
