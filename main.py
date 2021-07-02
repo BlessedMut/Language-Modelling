@@ -4,7 +4,8 @@ from pickle import load
 from tensorflow.keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
 import zipfile, io
-
+import warnings
+warnings.filterwarnings("ignore")
 
 def load_lines():
     with zipfile.ZipFile("./republic_sequences.zip") as zf:
@@ -47,6 +48,12 @@ def generate_seq(model, tokenizer, seq_length, seed_text, n_words):
     return ' ' .join(result)
 
 
+
+
+# generate new text
+generated = generate_seq(model, tokenizer, seq_length, seed_text, 10)
+
+
 st.title("Language Modelling API")
 
 st.slider("Adjust number of words generated in a sequence", min_value=1, max_value=50, step=1, value=10)
@@ -65,5 +72,5 @@ with col1:
     btn_text = st.button("Generate Seq")
     if btn_text:
         with col2:
-            stout.markdown(seed_text)
+            stout.markdown(seed_text + generated)
 
