@@ -1,7 +1,7 @@
 import streamlit as st
 from random import randint
 from pickle import load
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
 import zipfile
 
