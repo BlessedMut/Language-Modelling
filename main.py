@@ -71,5 +71,5 @@ with col1:
     btn_text = st.button("Generate Seq")
     if btn_text:
         with col2:
-            stout.markdown(seed_text + "**"+generated+"**")
+            stout.markdown(seed_text + "**"+ " " +generated+"**")
 
