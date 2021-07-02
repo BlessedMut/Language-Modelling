@@ -9,7 +9,7 @@ import zipfile
 def load_lines():
     zip = zipfile.ZipFile('./republic_sequences.zip')
     file = zip.read('republic_sequences.txt')
-    data = f.read()
+    data = file.read()
     lines = data.split('\n')
     return lines
 
