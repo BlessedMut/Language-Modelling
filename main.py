@@ -54,6 +54,8 @@ model = load_model('model.h5')
 # load the tokenizer
 tokenizer = load(open('tokenizer.pkl', 'rb'))
 
+seed_text = generate_sequ()
+
 # generate new text
 generated = generate_seq(model, tokenizer, 50, seed_text, 10)
 
@@ -62,7 +64,6 @@ st.title("Language Modelling API")
 
 st.slider("Adjust number of words generated in a sequence", min_value=1, max_value=50, step=1, value=10)
 
-seed_text = generate_sequ()
 stout = st.empty()
 
 col1, col2 = st.beta_columns([2,8])
