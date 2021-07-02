@@ -63,13 +63,12 @@ col1, col2 = st.beta_columns([2,8])
 with col1:
     btn_text = st.button("Generate Seq")
 
-
+words = "such as we have described common education common children and they are to watch over the citizens in common whether abiding in the city or going out to war they are to keep watch together and to hunt together like dogs and always and in all things as far as they"
 with col2:
     stout = st.empty()
 
     stout.markdown(words + " **Blessed**")
 
-    words = "such as we have described common education common children and they are to watch over the citizens in common whether abiding in the city or going out to war they are to keep watch together and to hunt together like dogs and always and in all things as far as they"
 
 
 
