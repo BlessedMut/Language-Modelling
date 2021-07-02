@@ -56,13 +56,13 @@ tokenizer = load(open('tokenizer.pkl', 'rb'))
 
 seed_text = generate_sequ()
 
+nwords = st.slider("Adjust number of words generated in a sequence", min_value=1, max_value=50, step=1, value=10)
+
 # generate new text
-generated = generate_seq(model, tokenizer, 50, seed_text, 10)
+generated = generate_seq(model, tokenizer, 50, seed_text, nwords)
 
 
 st.title("Language Modelling API")
-
-st.slider("Adjust number of words generated in a sequence", min_value=1, max_value=50, step=1, value=10)
 
 stout = st.empty()
 
