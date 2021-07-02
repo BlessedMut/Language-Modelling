@@ -39,8 +39,8 @@ def generate_seq(model, tokenizer, seq_length, seed_text, n_words):
         out_word = ''
         for word, index in tokenizer.word_index.items():
             if index == yhat:
-            out_word = word
-            break
+                out_word = word
+                break
         # append to input
         in_text += ' ' + out_word
         result.append(out_word)
