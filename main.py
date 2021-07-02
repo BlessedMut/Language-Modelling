@@ -58,6 +58,7 @@ model = load_model( './model.h5')
 tokenizer = load(open('./tokenizer.pkl', 'rb'))
 
 seed_text = generate_sequ()
+stout = st.empty()
 
 col1, col2 = st.beta_columns([2,8])
 with col1:
@@ -66,7 +67,7 @@ with col1:
         stout.markdown(seed_text)
 
 words = "such as we have described common education common children and they are to watch over the citizens in common whether abiding in the city or going out to war they are to keep watch together and to hunt together like dogs and always and in all things as far as they"
-stout = st.empty()
+
 with col2:
     stout.markdown(" ")
 
