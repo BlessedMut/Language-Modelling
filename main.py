@@ -3,15 +3,14 @@ from random import randint
 from pickle import load
 from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
-import io
 import zipfile
 
 
 def load_lines():
-    with zipfile.ZipFile("./republic_sequences.zip") as zf:
-        with io.TextIOWrapper(zf.open("republic_sequences.txt"), encoding="utf-8") as f:
-            data = f.read()
-            lines = data.split('\n')
+    zip = zipfile.ZipFile('./republic_sequences.zip')
+    file = zip.read('republic_sequences.txt')
+    data = f.read()
+    lines = data.split('\n')
     return lines
 
 lines = load_lines()
